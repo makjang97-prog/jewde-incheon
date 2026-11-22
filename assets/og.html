@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+KR:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px;
+    background: #fff;
+    color: #1b1c1e;
+    font-family: "Noto Serif KR", serif;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .frame { position: absolute; inset: 24px; border: 1px solid #e4e6e8; }
+  .rings { position: absolute; top: 50%; left: 50%; width: 760px; transform: translate(-50%, -52%); color: #b8bdc2; opacity: .38; }
+  .lines::before, .lines::after {
+    content: ""; position: absolute; top: 0; bottom: 0; width: 1px; background: #eceef0;
+  }
+  .lines::before { left: 180px; } .lines::after { right: 180px; }
+  .center { position: relative; text-align: center; }
+  .logo { font-family: "Cormorant Garamond", serif; font-size: 34px; letter-spacing: .42em; padding-left: .42em; }
+  .since { margin-top: 8px; font-family: sans-serif; font-size: 9px; letter-spacing: .34em; color: #8b9095; }
+  .rule { width: 40px; height: 1px; background: #b8bdc2; margin: 44px auto 40px; }
+  .en { font-family: "Cormorant Garamond", serif; font-weight: 300; font-size: 58px; line-height: 1.24; letter-spacing: .035em; }
+  .ko { margin-top: 22px; font-size: 20px; font-weight: 300; letter-spacing: .18em; color: #3d3f42; }
+  .bottom { position: absolute; left: 0; right: 0; bottom: 58px; text-align: center; font-family: sans-serif; font-size: 11px; letter-spacing: .18em; color: #8b9095; }
+  .store { position: absolute; right: 56px; bottom: 48px; font-family: sans-serif; font-size: 9px; letter-spacing: .16em; color: #a9aeb2; }
+</style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="lines"></div>
+  <svg class="rings" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="322" cy="232" r="124" stroke="currentColor" stroke-width="0.8"/>
+    <circle cx="322" cy="232" r="112" stroke="currentColor" stroke-width="0.4" opacity="0.65"/>
+    <circle cx="322" cy="232" r="148" stroke="currentColor" stroke-width="0.35" opacity="0.45"/>
+    <circle cx="430" cy="196" r="104" stroke="currentColor" stroke-width="0.8"/>
+    <circle cx="430" cy="196" r="92" stroke="currentColor" stroke-width="0.4" opacity="0.65"/>
+    <path d="M430 92 L448 118 L430 130 L412 118 Z" stroke="currentColor" stroke-width="0.8"/>
+  </svg>
+  <div class="center">
+    <div class="logo">JEWDE</div>
+    <div class="since">SINCE 1989 · INCHEON</div>
+    <div class="rule"></div>
+    <div class="en">Add Value To<br>One’s Precious Memory</div>
+    <div class="ko">소중한 기억에 가치를 더하다</div>
+  </div>
+  <div class="bottom">청담 예물 명가 · 쥬드주얼리 인천점</div>
+  <div class="store">JEWDE JEWELRY INCHEON · 두용프라자 205호</div>
+</body>
+</html>
