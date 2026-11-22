@@ -1065,9 +1065,7 @@ ul { padding: 0; list-style: none; }
     align-items: stretch;
     gap: 0;
     padding: 28px var(--gutter) 40px;
-    background: rgba(255, 255, 255, .985);
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
+    background: #ffffff;
     border-top: 1px solid var(--line);
     overflow-y: auto;
     opacity: 0;
