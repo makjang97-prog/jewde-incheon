@@ -179,6 +179,9 @@ ul { padding: 0; list-style: none; }
 }
 .nav .nav-cta:hover { background: var(--ink); color: #fff; }
 
+/* 모바일 메뉴 전용 — 외부 채널 링크(공식 블로그·인스타그램). 데스크톱 상단 메뉴에는 노출하지 않습니다. */
+.nav .nav-ext { display: none; }
+
 .menu-toggle {
   display: none;
   width: 44px;
@@ -1132,6 +1135,35 @@ ul { padding: 0; list-style: none; }
     border-bottom: 0;
     background: var(--ink);
     color: #fff;
+  }
+  .nav .nav-ext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-family: var(--sans);
+    font-size: 14.5px;
+    font-weight: 450;
+    letter-spacing: .02em;
+    color: var(--ink-soft);
+  }
+  .nav .nav-ext .nav-ext-arrow {
+    font-size: 12px;
+    color: var(--muted);
+    transition: transform .3s var(--ease), color .25s;
+  }
+  .nav .nav-ext:hover,
+  .nav .nav-ext:active { color: var(--ink); }
+  .nav .nav-ext:hover .nav-ext-arrow,
+  .nav .nav-ext:active .nav-ext-arrow { color: var(--ink); transform: translate(2px, -2px); }
+
+  /* 짧은 화면(아이폰 SE·소형 안드로이드)에서 메뉴 9개가 한 화면에 들어가도록 간격만 살짝 조입니다. */
+  @media (max-height: 740px) {
+    .nav { padding-top: 18px; padding-bottom: 22px; }
+    .nav a { padding: 13px 0; font-size: 17px; }
+    .nav .nav-ext { padding: 11px 0; }
+    .nav .nav-cta { margin-top: 16px; padding: 14px; }
   }
 
   .about-grid { grid-template-columns: 1fr; gap: 54px; }
