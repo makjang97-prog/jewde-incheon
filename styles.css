@@ -839,8 +839,8 @@ ul { padding: 0; list-style: none; }
 
 .map-label {
   position: absolute;
-  right: calc(50% + 34px);
-  top: calc(50% - 52px);
+  right: calc(50% + 42px);
+  top: calc(50% - 72px);
   text-align: right;
   background: #fff;
   border: 1px solid var(--ink);
