@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jewde-incheon.vercel.app/sitemap.xml
+Sitemap: https://jewdeincheon.com/sitemap.xml

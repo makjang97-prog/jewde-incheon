@@ -1,7 +1,7 @@
 # 쥬드주얼리 인천점 — 원페이지 홈페이지
 
 청담 예물 명가 쥬드주얼리의 인천점 공식 안내 페이지입니다.
-https://jewde-incheon.vercel.app
+https://jewdeincheon.com
 
 ## 구성
 
@@ -41,7 +41,7 @@ git push
 
 - GitHub: `makjang97-prog/jewde-incheon` (public)
 - Vercel: 프로젝트 `jewde-incheon` (팀 `maisonyoung`, Hobby)
-- Production: https://jewde-incheon.vercel.app
+- Production: https://jewdeincheon.com (보조 도메인 www.jewdeincheon.com → 308, jewde-incheon.vercel.app)
 
 ## 주의
 
