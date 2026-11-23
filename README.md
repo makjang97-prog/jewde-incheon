@@ -10,7 +10,9 @@ https://jewde-incheon.vercel.app
 | `index.html` | 페이지 전체(문구·섹션·구조화 데이터 JSON-LD) |
 | `styles.css` | 색·서체·여백·반응형 (`:root` 변수) |
 | `script.js` | 헤더·모바일 메뉴·스크롤 효과·FAQ·카카오 안내 모달 |
-| `assets/map.jpg` | 매장 주변 약도 (OpenStreetMap 타일, 2026-11 생성) |
+| `assets/map.jpg` | 매장 주변 약도 — 컬러 OpenStreetMap 타일 (2026-11 생성) |
+| `assets/ring-sketch.jpg` | About 섹션 반지 디자인 연필 스케치 (본사 `jewde.com` 촬영본, 모노톤 보정) |
+| `assets/atelier-hamchaehun.jpg` | 함채헌 섹션 자체공방 장인 사진 (본사 `jewde.com` 공방4) |
 | `assets/og-image.png` | 카카오톡·SNS 공유 썸네일 (1200×630) |
 | `robots.txt`, `sitemap.xml` | 검색엔진 수집 설정 |
 
@@ -45,3 +47,5 @@ git push
 
 - 본사(`jewde.com`)의 대표자·사업자 정보는 이 페이지에 넣지 않습니다. 인천점 정보만 표기합니다.
 - 함채헌 공방 경력은 **30년 이상**으로만 표기합니다.
+- 사진 2장(`ring-sketch.jpg`, `atelier-hamchaehun.jpg`)은 본사 `jewde.com`의 쥬드 촬영본을 내려받아 사이트 안에 함께 올린 파일입니다(외부 핫링크 아님). 사진을 바꿀 때도 같은 방식으로 `assets/`에 넣어 주세요.
+- `SINCE 1989`는 본사(1989년 청담)의 연혜이고, 인천점은 **2023년** 개점입니다. 헤더·푸터 표기는 `INCHEON · EST. 2023`을 유지합니다.
