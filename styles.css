@@ -1136,25 +1136,18 @@ ul { padding: 0; list-style: none; }
     background: var(--ink);
     color: #fff;
   }
+  /* 모바일 메뉴의 외부 채널 링크도 상단 메뉴(.nav a)와 글씨체·크기·굵기·색상·간격을 그대로 물려받습니다.
+     여기서는 화살표를 오른쪽 끝에 두는 배치만 잡습니다. */
   .nav .nav-ext {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--line-soft);
-    font-family: var(--sans);
-    font-size: 14.5px;
-    font-weight: 450;
-    letter-spacing: .02em;
-    color: var(--ink-soft);
   }
   .nav .nav-ext .nav-ext-arrow {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--muted);
     transition: transform .3s var(--ease), color .25s;
   }
-  .nav .nav-ext:hover,
-  .nav .nav-ext:active { color: var(--ink); }
   .nav .nav-ext:hover .nav-ext-arrow,
   .nav .nav-ext:active .nav-ext-arrow { color: var(--ink); transform: translate(2px, -2px); }
 
@@ -1162,7 +1155,6 @@ ul { padding: 0; list-style: none; }
   @media (max-height: 740px) {
     .nav { padding-top: 18px; padding-bottom: 22px; }
     .nav a { padding: 13px 0; font-size: 17px; }
-    .nav .nav-ext { padding: 11px 0; }
     .nav .nav-cta { margin-top: 16px; padding: 14px; }
   }
 
