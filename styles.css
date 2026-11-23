@@ -143,6 +143,7 @@ ul { padding: 0; list-style: none; }
 }
 .nav a {
   position: relative;
+  white-space: nowrap;
   font-size: 13px;
   font-weight: 450;
   letter-spacing: .02em;
