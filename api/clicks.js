@@ -196,7 +196,7 @@ function html(report) {
     '.wrap{padding:20px 14px 40px}' +
     'h1{font-size:21px}' +
     '.card{padding:13px 14px}.card-v{font-size:27px}' +
-    'th,td{padding:9px 7px;font-size:13px}' +
+    'th,td{padding:9px 6px;font-size:13px;white-space:nowrap}' +
     '.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}' +
     'table{font-size:13px}' +
     '}' +
@@ -211,12 +211,12 @@ function html(report) {
     statCard('예약 버튼 누른 사람', o.total.booking_visitors + '명', '예약 클릭 ' + o.total.bookings + '회') +
     '</div>' +
     '<h2>유입 경로별</h2>' +
-    '<div class="tbl-wrap"><table><thead><tr><th>유입</th><th>전체 클릭</th><th>전체 방문자</th><th>예약 클릭</th><th>7일 클릭</th><th>30일 클릭</th></tr></thead>' +
+    '<div class="tbl-wrap"><table><thead><tr><th>유입</th><th>전체 클릭</th><th>방문자</th><th>예약</th><th>7일</th><th>30일</th></tr></thead>' +
     '<tbody>' + (sourceRows || '<tr><td colspan="6">아직 기록이 없습니다.</td></tr>') + '</tbody></table></div>' +
     '<h2>최근 기록 20건</h2>' +
     '<div class="tbl-wrap"><table class="recent"><thead><tr><th>시각 (KST)</th><th>유입</th><th>동작</th></tr></thead>' +
     '<tbody>' + (recentRows || '<tr><td colspan="3">아직 기록이 없습니다.</td></tr>') + '</tbody></table></div>' +
-    '<div class="foot">· <b>방문자</b>는 같은 기기에서 다시 눌러도 1명으로 셉니다(클릭 수와 다릅니다).<br>' +
+    '<div class="foot">· <b>방문자</b>는 같은 기기에서 다시 눌러도 1명으로 셉니다(클릭 수와 다릅니다). <b>7일·30일</b>은 그 기간의 클릭 수입니다.<br>' +
     '· 메일에 넣는 주소: <b>https://jewdeincheon.com/go-booking?src=mail</b> / <b>https://jewdeincheon.com/?src=mail</b><br>' +
     '· 이 화면 주소는 외부에 공유하지 마세요. 새로 고치면 최신 집계로 바뀝니다.</div>' +
     '</div></body></html>';
