@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /go-booking
+Disallow: /clicks
 
 Sitemap: https://jewdeincheon.com/sitemap.xml

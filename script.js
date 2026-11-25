@@ -131,6 +131,67 @@ const KAKAO_CHANNEL_URL = ""; // ← 카카오톡 채널 주소 수신 시 여�
     });
   }
 
+  /* ---------- 메일·링크 유입 추적 ---------- */
+  (function trackClicks() {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const clean = (v) =>
+        String(v || "")
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9_-]/g, "")
+          .slice(0, 32);
+      const incoming = clean(params.get("src") || params.get("from"));
+
+      if (incoming) {
+        try {
+          sessionStorage.setItem("jewde_src", incoming);
+        } catch (e) {}
+      }
+
+      let stored = "";
+      try {
+        stored = sessionStorage.getItem("jewde_src") || "";
+      } catch (e) {}
+      const src = incoming || stored;
+
+      const beacon = (target) => {
+        const url =
+          "/api/track?target=" +
+          encodeURIComponent(target) +
+          "&src=" +
+          encodeURIComponent(src || "direct");
+        if (navigator.sendBeacon) {
+          try {
+            navigator.sendBeacon(url, new Blob(["1"], { type: "text/plain" }));
+            return;
+          } catch (e) {}
+        }
+        fetch(url, { method: "POST", keepalive: true }).catch(() => {});
+      };
+
+      // 메일 링크(?src=mail)로 들어온 경우 방문 1회 기록 — 같은 탭에서 새로 고쳐도 1회
+      if (incoming) {
+        const flag = "jewde_landing_" + incoming;
+        let seen = false;
+        try {
+          seen = sessionStorage.getItem(flag) === "1";
+        } catch (e) {}
+        if (!seen) {
+          try {
+            sessionStorage.setItem(flag, "1");
+          } catch (e) {}
+          beacon("landing");
+        }
+      }
+
+      // 네이버 예약 버튼을 누르면 기록 (메일 유입이 아니면 direct 로 남습니다)
+      document.querySelectorAll('a[href*="booking.naver.com"]').forEach((a) => {
+        a.addEventListener("click", () => beacon("naver_booking"));
+      });
+    } catch (e) {}
+  })();
+
   /* ---------- FAQ: 한 번에 하나만 열기 ---------- */
   const faqItems = Array.from(document.querySelectorAll(".faq-item"));
   faqItems.forEach((item) => {

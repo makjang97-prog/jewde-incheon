@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/go-booking", "destination": "/api/go-booking" },
+    { "source": "/clicks", "destination": "/api/clicks" }
+  ],
+  "headers": [
+    {
+      "source": "/clicks",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
+  ]
+}
