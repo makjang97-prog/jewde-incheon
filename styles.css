@@ -997,77 +997,6 @@ ul { padding: 0; list-style: none; }
 .mobile-bar { display: none; }
 
 /* =========================================================
-   Modal
-   ========================================================= */
-
-.modal {
-  width: min(480px, calc(100vw - 40px));
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--body);
-}
-.modal::backdrop {
-  background: rgba(15, 17, 19, .55);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
-}
-.modal-inner {
-  position: relative;
-  background: #fff;
-  padding: clamp(40px, 6vw, 56px) clamp(28px, 5vw, 46px) clamp(32px, 5vw, 42px);
-  text-align: center;
-}
-.modal[open] .modal-inner { animation: modalIn .4s var(--ease); }
-@keyframes modalIn {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 40px;
-  height: 40px;
-  padding: 12px;
-  background: none;
-  border: 0;
-  color: var(--ink-soft);
-  cursor: pointer;
-}
-.modal-close svg { width: 100%; height: 100%; }
-
-.modal-eyebrow {
-  font-size: 9px;
-  letter-spacing: .34em;
-  color: var(--muted);
-  margin-bottom: 20px;
-  padding-left: .34em;
-}
-.modal-title {
-  font-family: var(--serif);
-  font-size: clamp(20px, 3vw, 25px);
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--ink);
-}
-.modal-desc {
-  margin-top: 16px;
-  font-size: 13.5px;
-  line-height: 1.85;
-  color: #6c7074;
-}
-.modal-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 30px;
-}
-.modal-actions .btn { width: 100%; padding: 15px 20px; font-size: 13px; }
-.modal-place { margin-top: 22px; font-size: 12px; }
-
-/* =========================================================
    Reveal animation
    ========================================================= */
 
@@ -1231,7 +1160,6 @@ ul { padding: 0; list-style: none; }
   .visit-table > div { grid-template-columns: 78px 1fr; gap: 12px; }
 
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .modal-actions .btn { min-width: 0; }
 }
 
 @media (max-width: 600px) {

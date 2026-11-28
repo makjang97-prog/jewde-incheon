@@ -1,13 +1,6 @@
 /* =========================================================
    JEWDE JEWELRY INCHEON — script
-   ---------------------------------------------------------
-   [채널 링크 교체 지점]
-   카카오톡 채널 주소를 받으면 아래 KAKAO_CHANNEL_URL 에 넣기만 하면
-   카카오톡 상담 버튼이 안내 모달 대신 채널로 바로 연결됩니다.
-   예) "https://pf.kakao.com/_xxxxxxxx"
    ========================================================= */
-
-const KAKAO_CHANNEL_URL = ""; // ← 카카오톡 채널 주소 수신 시 여기에 입력
 
 (function () {
   "use strict";
@@ -15,9 +8,6 @@ const KAKAO_CHANNEL_URL = ""; // ← 카카오톡 채널 주소 수신 시 여�
   const header = document.querySelector(".site-header");
   const nav = document.getElementById("nav");
   const menuToggle = document.getElementById("menuToggle");
-  const kakaoBtn = document.getElementById("kakaoBtn");
-  const kakaoModal = document.getElementById("kakaoModal");
-  const kakaoClose = document.getElementById("kakaoClose");
 
   /* ---------- header state ---------- */
   const onScroll = () => {
@@ -94,40 +84,6 @@ const KAKAO_CHANNEL_URL = ""; // ← 카카오톡 채널 주소 수신 시 여�
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (el) spy.observe(el);
-    });
-  }
-
-  /* ---------- Kakao channel ---------- */
-  if (kakaoBtn) {
-    kakaoBtn.addEventListener("click", () => {
-      if (KAKAO_CHANNEL_URL) {
-        window.open(KAKAO_CHANNEL_URL, "_blank", "noopener");
-        return;
-      }
-      if (kakaoModal && typeof kakaoModal.showModal === "function") {
-        kakaoModal.showModal();
-      } else if (kakaoModal) {
-        kakaoModal.setAttribute("open", "");
-      }
-    });
-  }
-
-  if (kakaoModal) {
-    const closeModal = () => {
-      if (typeof kakaoModal.close === "function") kakaoModal.close();
-      else kakaoModal.removeAttribute("open");
-    };
-
-    if (kakaoClose) kakaoClose.addEventListener("click", closeModal);
-
-    // 바깥(백드롭) 클릭 시 닫기
-    kakaoModal.addEventListener("click", (event) => {
-      if (event.target === kakaoModal) closeModal();
-    });
-
-    // 모달 안의 전화·예약 링크를 누르면 모달을 닫고 이동
-    kakaoModal.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => closeModal());
     });
   }
 

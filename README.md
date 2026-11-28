@@ -9,7 +9,7 @@ https://jewdeincheon.com
 |---|---|
 | `index.html` | 페이지 전체(문구·섹션·구조화 데이터 JSON-LD) |
 | `styles.css` | 색·서체·여백·반응형 (`:root` 변수) |
-| `script.js` | 헤더·모바일 메뉴·스크롤 효과·FAQ·카카오 안내 모달 |
+| `script.js` | 헤더·모바일 메뉴·스크롤 효과·FAQ·메일 유입 추적 |
 | `assets/map.jpg` | 매장 주변 약도 — 컬러 OpenStreetMap 타일 (2026-11 생성) |
 | `assets/ring-sketch.jpg` | About 섹션 반지 디자인 연필 스케치 (본사 `jewde.com` 촬영본, 모노톤 보정) |
 | `assets/atelier-hamchaehun.jpg` | 함채헌 섹션 자체공방 장인 사진 (본사 `jewde.com` 공방4) |
@@ -29,8 +29,6 @@ git push
 
 ## 자주 고치는 곳
 
-- **카카오톡 채널 링크**: `script.js` 맨 위 `KAKAO_CHANNEL_URL` 상수에 채널 주소를 넣으면
-  카카오톡 상담 버튼이 안내 모달 대신 채널로 바로 연결됩니다.
 - **네이버 예약**: `index.html`의 `https://booking.naver.com/booking/6/bizes/1389525`
 - **블로그·인스타·플레이스**: `index.html`의 각 채널 링크
 - **주소·전화·운영시간**: `index.html`의 `#visit` 섹션과 `<footer>`, 그리고 JSON-LD
@@ -45,6 +43,7 @@ git push
 
 ## 주의
 
+- 카카오톡 상담 카드와 채널 안내 모달은 2026-11-28 대표 결정으로 페이지에서 삭제했습니다. 다시 넣을 때는 채널 섹션(`.channel-grid`)에 네이버 예약·블로그·인스타 카드와 같은 형식("channel-card")으로 추가합니다.
 - 본사(`jewde.com`)의 대표자·사업자 정보는 이 페이지에 넣지 않습니다. 인천점 정보만 표기합니다.
 - 함채헌 공방 경력은 **30년 이상**으로만 표기합니다.
 - 사진 2장(`ring-sketch.jpg`, `atelier-hamchaehun.jpg`)은 본사 `jewde.com`의 쥬드 촬영본을 내려받아 사이트 안에 함께 올린 파일입니다(외부 핫링크 아님). 사진을 바꿀 때도 같은 방식으로 `assets/`에 넣어 주세요.
